@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.Vignette
-  active: 1
+  active: 0
   color:
     m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
@@ -42,14 +42,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights
   active: 1
   shadows:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {x: 1, y: 0.16716999, z: 0.32713762, w: -1}
   midtones:
     m_OverrideState: 1
     m_Value: {x: 1, y: 0.58702123, z: 0, w: -0.85026735}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.023135722, z: 0.032832853, w: 1}
+    m_Value: {x: 1, y: 0.36641335, z: 0.3717397, w: 1}
   shadowsStart:
     m_OverrideState: 1
     m_Value: 0.21
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
-  m_Name: localvolume
+  m_Name: comeback
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.VolumeProfile
   components:
   - {fileID: -6116424389499705453}
@@ -219,20 +219,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.LensDistortion
   active: 1
   intensity:
-    m_OverrideState: 1
-    m_Value: -0.41
-  xMultiplier:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
+  xMultiplier:
+    m_OverrideState: 0
+    m_Value: 1
   yMultiplier:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   center:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
   scale:
-    m_OverrideState: 1
-    m_Value: 1.61
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!114 &4669820241417598486
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -285,7 +285,7 @@ MonoBehaviour:
     m_Value: 2.45
   scatter:
     m_OverrideState: 1
-    m_Value: 0.591
+    m_Value: 1
   clamp:
     m_OverrideState: 1
     m_Value: 65472
@@ -306,7 +306,7 @@ MonoBehaviour:
     m_Value: 5
   dirtTexture:
     m_OverrideState: 1
-    m_Value: {fileID: 2800000, guid: 965ff94fa349442e28fc98e184af146d, type: 3}
+    m_Value: {fileID: 2800000, guid: 1d73c7364e76442d8a742979991caf32, type: 3}
     dimension: 1
   dirtIntensity:
     m_OverrideState: 1
