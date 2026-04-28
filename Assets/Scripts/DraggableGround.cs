@@ -175,6 +175,11 @@ public class DraggableGround : MonoBehaviour
         return world;
     }
 
+    public bool IsDragging()
+    {
+        return isDragging;
+    }
+
     IEnumerator Shake()
     {
         Vector3 originalPos = transform.position;
