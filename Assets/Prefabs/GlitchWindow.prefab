@@ -185,6 +185,8 @@ MonoBehaviour:
   alwaysLocked: 0
   shakeDuration: 0.2
   shakeMagnitude: 0.1
+  clampX: 0
+  clampY: 0
   scaleUpAmount: 1.1
   scaleSpeed: 10
 --- !u!114 &1314903860721993610
@@ -202,7 +204,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  checkRadius: 2
+  checkSize: {x: 3.17, y: 2.18}
   glitchDuration: 0.3
   flickerSpeed: 0.02
   shakeMagnitude: 0.1

@@ -24,6 +24,8 @@ public class TopDownPlayerWithBounds : MonoBehaviour
     public float afterImageRate = 0.05f;
     private float afterImageTimer;
 
+    public float fadeSpeed = 1f;
+
     private SpriteRenderer sr;
 
     void Start()
@@ -120,6 +122,7 @@ public class TopDownPlayerWithBounds : MonoBehaviour
         ghostSR.color = c;
 
         ghost.AddComponent<AfterImageFade>();
+        ghost.GetComponent<AfterImageFade>().fadeSpeed = fadeSpeed;
     }
 
     bool IsGroundAtPosition(Vector2 position)

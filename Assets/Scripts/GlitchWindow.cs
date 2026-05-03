@@ -4,7 +4,9 @@ using System.Collections;
 public class GlitchWindow : MonoBehaviour
 {
     public LayerMask playerLayer;
-    public float checkRadius = 0.4f;
+
+    [Header("Box Check Size")]
+    public Vector2 checkSize = new Vector2(1f, 1f);// width & height of square
 
     private bool playerWasOn = false;
 
@@ -33,7 +35,6 @@ public class GlitchWindow : MonoBehaviour
         originalScale = transform.localScale;
         originalPosition = transform.position;
 
-        // auto-assign if missing
         if (audioSource == null)
             audioSource = GetComponent<AudioSource>();
     }
@@ -42,11 +43,17 @@ public class GlitchWindow : MonoBehaviour
     {
         if (isGlitching) return;
 
-        // 🚫 Skip logic if dragging
+        // Skip logic if dragging
         if (draggable != null && draggable.IsDragging())
             return;
 
-        bool playerIsOn = Physics2D.OverlapCircle(transform.position, checkRadius, playerLayer);
+        // 🔲 BOX CHECK INSTEAD OF CIRCLE
+        bool playerIsOn = Physics2D.OverlapBox(
+            transform.position,
+            checkSize,
+            0f,
+            playerLayer
+        );
 
         if (playerWasOn && !playerIsOn)
         {
@@ -60,7 +67,6 @@ public class GlitchWindow : MonoBehaviour
     {
         isGlitching = true;
 
-        // 🎵 PLAY SOUND AT START
         if (audioSource != null && glitchSound != null)
         {
             audioSource.PlayOneShot(glitchSound);
@@ -102,14 +108,15 @@ public class GlitchWindow : MonoBehaviour
             col.enabled = false;
 
         this.enabled = false;
-
         gameObject.SetActive(false);
     }
 
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, checkRadius);
+
+        // 🔲 DRAW BOX INSTEAD OF SPHERE
+        Gizmos.DrawWireCube(transform.position, checkSize);
     }
 
     public void Reactivate()

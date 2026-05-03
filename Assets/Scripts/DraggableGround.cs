@@ -14,6 +14,7 @@ public class DraggableGround : MonoBehaviour
     public bool alwaysLocked = false;
     public float shakeDuration = 0.2f;
     public float shakeMagnitude = 0.1f;
+
     [Header("Juice - Scale")]
     public float scaleUpAmount = 1.1f;
     public float scaleSpeed = 10f;
@@ -28,11 +29,13 @@ public class DraggableGround : MonoBehaviour
     private Vector3 startDragPosition;
     private Vector3 startPosition;
 
+    // axis constraint
+    private DragAxisConstraint axisConstraint;
+
     // color handling
     private SpriteRenderer sr;
     private Color originalColor;
     private Color lockedColor;
-    private Color alwaysLockedColor = new Color32(0xEC, 0x3B, 0x00, 255);
 
     void Start()
     {
@@ -41,12 +44,13 @@ public class DraggableGround : MonoBehaviour
 
         startPosition = transform.position;
 
+        axisConstraint = GetComponent<DragAxisConstraint>();
+
         sr = GetComponent<SpriteRenderer>();
         if (sr != null)
         {
             originalColor = sr.color;
-
-            lockedColor = new Color32(84, 84, 84, 255); // normal locked color
+            lockedColor = new Color32(128, 128, 128, 255);
         }
 
         if (alwaysLocked)
@@ -54,37 +58,42 @@ public class DraggableGround : MonoBehaviour
             isLocked = true;
 
             if (sr != null)
-                sr.color = alwaysLockedColor;
+                sr.color = originalColor;
         }
     }
 
     void OnMouseDown()
-{
-    if (alwaysLocked || isLocked)
     {
-        StartCoroutine(Shake());
-        return;
+        if (alwaysLocked || isLocked)
+        {
+            StartCoroutine(Shake());
+            return;
+        }
+
+        if (PlayerManager.Instance != null && PlayerManager.Instance.IsMoving())
+            return;
+
+        if (IsPlayerOnTile())
+            return;
+
+        Vector3 mouseWorld = GetMouseWorldPosition();
+        offset = transform.position - mouseWorld;
+
+        isDragging = true;
+        startDragPosition = transform.position;
+
+        // tell constraint we started dragging
+        if (axisConstraint != null)
+        {
+            axisConstraint.OnStartDrag(transform.position);
+        }
+
+        targetScale = originalScale * scaleUpAmount;
     }
-
-    if (PlayerManager.Instance != null && PlayerManager.Instance.IsMoving())
-        return;
-
-    if (IsPlayerOnTile())
-        return;
-
-    Vector3 mouseWorld = GetMouseWorldPosition();
-    offset = transform.position - mouseWorld;
-
-    isDragging = true;
-    startDragPosition = transform.position;
-
-    targetScale = originalScale * scaleUpAmount;
-}
 
     void OnMouseUp()
     {
         if (!isDragging) return;
-
         StopDragging();
     }
 
@@ -99,7 +108,15 @@ public class DraggableGround : MonoBehaviour
         if (isDragging)
         {
             Vector3 mouseWorld = GetMouseWorldPosition();
-            transform.position = mouseWorld + offset;
+            Vector3 targetPos = mouseWorld + offset;
+
+            // APPLY AXIS CONSTRAINT HERE
+            if (axisConstraint != null)
+            {
+                targetPos = axisConstraint.ApplyConstraint(targetPos);
+            }
+
+            transform.position = targetPos;
         }
 
         transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * scaleSpeed);
@@ -109,6 +126,12 @@ public class DraggableGround : MonoBehaviour
     {
         isDragging = false;
 
+        // notify constraint
+        if (axisConstraint != null)
+        {
+            axisConstraint.OnEndDrag();
+        }
+
         Vector3 snapped = transform.position;
         snapped.x = Mathf.Round(snapped.x / gridSize) * gridSize;
         snapped.y = Mathf.Round(snapped.y / gridSize) * gridSize;
@@ -116,14 +139,13 @@ public class DraggableGround : MonoBehaviour
 
         transform.position = snapped;
 
-        // lock ONLY if actually moved
         if (Vector3.Distance(startDragPosition, snapped) > 0.01f)
         {
             isLocked = true;
 
             if (sr != null)
             {
-                sr.color = alwaysLocked ? alwaysLockedColor : lockedColor;
+                sr.color = lockedColor;
             }
         }
 
@@ -131,33 +153,29 @@ public class DraggableGround : MonoBehaviour
     }
 
     public void ResetWindow()
-{
-    isDragging = false;
-
-    transform.position = startPosition;
-
-    targetScale = originalScale;
-    transform.localScale = originalScale;
-
-    if (!alwaysLocked)
     {
-        isLocked = false;
+        isDragging = false;
 
-        if (sr != null)
-{
-    sr.color = alwaysLocked ? alwaysLockedColor : originalColor;
-}
-    }
-    else
-    {
-        isLocked = true;
+        transform.position = startPosition;
 
-        if (sr != null)
-    {
-        sr.color = alwaysLocked ? alwaysLockedColor : originalColor;
+        targetScale = originalScale;
+        transform.localScale = originalScale;
+
+        if (!alwaysLocked)
+        {
+            isLocked = false;
+
+            if (sr != null)
+                sr.color = originalColor;
+        }
+        else
+        {
+            isLocked = true;
+
+            if (sr != null)
+                sr.color = originalColor;
+        }
     }
-    }
-}
 
     bool IsPlayerOnTile()
     {
