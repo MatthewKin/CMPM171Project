@@ -13,6 +13,10 @@ PrefabInstance:
       value: LockedWindow
       objectReference: {fileID: 0}
     - target: {fileID: 890834987712436950, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 890834987712436950, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: checkRadius
       value: 2
       objectReference: {fileID: 0}
@@ -22,19 +26,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4087131826023159234, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.277292
+      value: 5.28
       objectReference: {fileID: 0}
     - target: {fileID: 4087131826023159234, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.8112
+      value: 4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4087131826023159234, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.88000005
       objectReference: {fileID: 0}
     - target: {fileID: 4087131826023159234, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4087131826023159234, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4087131826023159234, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -70,15 +78,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.b
-      value: 0.051886797
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.g
-      value: 0.3547563
+      value: 0.22953375
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.9245283
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
