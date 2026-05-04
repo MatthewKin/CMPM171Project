@@ -17,7 +17,7 @@ Well, well, well.
 ->END
 === Tutorial3_Elara ===
 That voice, it's still there, I suppose I must continue forward.
-Perhaps there trapped here as well. 
+Perhaps they're trapped here as well. 
 ->END
 === Tutorial3_EvilMan ===
 I wonder...

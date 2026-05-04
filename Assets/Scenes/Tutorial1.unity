@@ -479,7 +479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 35.6, y: 33.6}
+  m_AnchoredPosition: {x: 35.600006, y: 33.600006}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &324435659
@@ -1231,12 +1231,15 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   glitchSound: {fileID: 0}
   startKnot: Tutorial1_Elara
+  dialogueMode: 0
   delayBeforeStart: 2
   typeSpeed: 0.05
-  autoAdvanceDelay: 2
-  autoAdvance: 0
+  delayBeforeFade: 2
   useGlitchOnType: 1
   shakeMagnitude: 2
+  glitchDuration: 0.4
+  flickerSpeed: 0.05
+  fadeDuration: 1.5
 --- !u!114 &773086892
 MonoBehaviour:
   m_ObjectHideFlags: 0
