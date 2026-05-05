@@ -7,7 +7,7 @@ I gotta find a way out of here.
 Perhaps, if I use these windows I can get to that red one over there. 
 ->END
 === Tutorial2_Elara ===
-Goodness...theres more.
+Goodness...there's more.
 Wait, another voice.
 Hello?
 Hmmm, it seems they can't hear me. 
@@ -36,4 +36,8 @@ The last one?
 ->END
 === Tutorial5_EvilMan ===
 Almost...the last one.
+->END
+
+=== CorruptedLevel1_EvilMan ===
+Please... Don't leave me again.
 ->END

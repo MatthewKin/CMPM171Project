@@ -45,6 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3ffcf9101c514493ba3fab9bbb14b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  musicSource: {fileID: 8296621389273993674}
+  fadeDuration: 0.1
+  sceneMusicList:
+  - sceneName: CorruptedLevel1
+    musicClip: {fileID: 8300000, guid: c1bd4c85c745743ff9e376978b5f3259, type: 3}
+  - sceneName: Tutorial1
+    musicClip: {fileID: 8300000, guid: b749cd829f6d34f6ba7018262373962f, type: 3}
 --- !u!1 &2787759500301518964
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,9 +95,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 9487f66e3d4a444d384baf05535b4675, type: 3}
+  m_Resource: {fileID: 8300000, guid: b749cd829f6d34f6ba7018262373962f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 1
   Mute: 0
