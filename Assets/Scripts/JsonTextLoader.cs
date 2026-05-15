@@ -21,6 +21,7 @@ public class JsonTextLoader : MonoBehaviour
     [Header("Timings")]
     public float delayBeforeStart = 0f;
     public float typeSpeed = 0.05f;
+    public bool waitForStart = false;
     
     [Header("EvilMan Auto-Advance")]
     public float delayBeforeFade = 2f; // Time to wait after a line finishes before auto-advancing
@@ -62,7 +63,7 @@ public class JsonTextLoader : MonoBehaviour
             inkStory.ChoosePathString(startKnot);
         }
         
-        if (delayBeforeStart > 0f)
+        if (delayBeforeStart > 0f && !waitForStart)
         {
             yield return new WaitForSeconds(delayBeforeStart);
             PlayNextLine();
@@ -70,13 +71,16 @@ public class JsonTextLoader : MonoBehaviour
     }
 
     void Update()
-        {
+    {
         // Simple input check
-            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        {
+            if(!waitForStart) 
             {
                 HandleInput();
             }
         }
+    }
     private void HandleInput()
     {
         if (isTyping)
