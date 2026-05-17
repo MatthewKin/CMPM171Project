@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 using System.Collections;
 using Ink.Runtime;
@@ -13,6 +14,7 @@ public class JsonTextLoader : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public AudioSource audioSource;
     public AudioClip glitchSound;
+    public UnityEvent dialogueFinished;
 
     [Header("Ink Settings")]  
     public string startKnot; //This will be accessing the Ink knots such as "Tutotial1_Elara" 
@@ -42,6 +44,7 @@ public class JsonTextLoader : MonoBehaviour
     private Coroutine typingCoroutine;
     private Vector3 originalPos;
     private Vector3 originalScale;
+    private bool started = false;
 
     // FIX: Changed 'void' to 'IEnumerator' to allow yield return
     IEnumerator Start()
@@ -66,6 +69,7 @@ public class JsonTextLoader : MonoBehaviour
         if (delayBeforeStart > 0f && !waitForStart)
         {
             yield return new WaitForSeconds(delayBeforeStart);
+            started = true;
             PlayNextLine();
         }
     }
@@ -80,7 +84,13 @@ public class JsonTextLoader : MonoBehaviour
                 HandleInput();
             }
         }
+
+        if(!started && !waitForStart) {
+            started = true;
+            PlayNextLine();
+        }
     }
+
     private void HandleInput()
     {
         if (isTyping)
@@ -118,6 +128,11 @@ public class JsonTextLoader : MonoBehaviour
         else
         {
             gameObject.SetActive(false); // Hide text when story ends
+            //dialogue ends
+            if(dialogueFinished != null)
+            {
+                dialogueFinished.Invoke();
+            }
         }
     }
 

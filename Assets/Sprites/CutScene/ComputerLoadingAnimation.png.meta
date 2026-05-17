@@ -1,88 +1,91 @@
 fileFormatVersion: 2
-guid: 07cc855e9962a0b459d358b88aad5b0f
+guid: 753085e3301066e45afc8a3b326438e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6728900747293284927
-    second: ComputerLoadingAnimation-Sheet_0
+      213: 1897046253176449140
+    second: ComputerLoadingAnimation_0
   - first:
-      213: -7445987640878483788
-    second: ComputerLoadingAnimation-Sheet_1
+      213: -696115115806868225
+    second: ComputerLoadingAnimation_1
   - first:
-      213: -1049698267249834545
-    second: ComputerLoadingAnimation-Sheet_2
+      213: -8040854791055450480
+    second: ComputerLoadingAnimation_2
   - first:
-      213: 654815764452733664
-    second: ComputerLoadingAnimation-Sheet_3
+      213: -8522839033098556935
+    second: ComputerLoadingAnimation_3
   - first:
-      213: -1844101756880036056
-    second: ComputerLoadingAnimation-Sheet_4
+      213: 4415319284055796255
+    second: ComputerLoadingAnimation_4
   - first:
-      213: -9153206564583946749
-    second: ComputerLoadingAnimation-Sheet_5
+      213: -1716997143149007436
+    second: ComputerLoadingAnimation_5
   - first:
-      213: 5442248409566439457
-    second: ComputerLoadingAnimation-Sheet_6
+      213: -3360907831723699892
+    second: ComputerLoadingAnimation_6
   - first:
-      213: -2367805881851290609
-    second: ComputerLoadingAnimation-Sheet_7
+      213: -8610416353179954231
+    second: ComputerLoadingAnimation_7
   - first:
-      213: -9050972025743013095
-    second: ComputerLoadingAnimation-Sheet_8
+      213: 3316878744525248387
+    second: ComputerLoadingAnimation_8
   - first:
-      213: 3105668234702974228
-    second: ComputerLoadingAnimation-Sheet_9
+      213: 836720222494220340
+    second: ComputerLoadingAnimation_9
   - first:
-      213: 19474505894601576
-    second: ComputerLoadingAnimation-Sheet_10
+      213: -1168841880586372078
+    second: ComputerLoadingAnimation_10
   - first:
-      213: -6538395048415027369
-    second: ComputerLoadingAnimation-Sheet_11
+      213: 1225961952106669203
+    second: ComputerLoadingAnimation_11
   - first:
-      213: 1966502057786119013
-    second: ComputerLoadingAnimation-Sheet_12
+      213: -6517434531889539315
+    second: ComputerLoadingAnimation_12
   - first:
-      213: 6758939851241060840
-    second: ComputerLoadingAnimation-Sheet_13
+      213: -4432174642863035566
+    second: ComputerLoadingAnimation_13
   - first:
-      213: 7443079331069120380
-    second: ComputerLoadingAnimation-Sheet_14
+      213: 178296142902985783
+    second: ComputerLoadingAnimation_14
   - first:
-      213: 8844077750921444215
-    second: ComputerLoadingAnimation-Sheet_15
+      213: 8641086086402970400
+    second: ComputerLoadingAnimation_15
   - first:
-      213: -7046223062178453057
-    second: ComputerLoadingAnimation-Sheet_16
+      213: -3695657648216263457
+    second: ComputerLoadingAnimation_16
   - first:
-      213: -3399874148535084555
-    second: ComputerLoadingAnimation-Sheet_17
+      213: -6834068160651126896
+    second: ComputerLoadingAnimation_17
   - first:
-      213: -1111065644633667461
-    second: ComputerLoadingAnimation-Sheet_18
+      213: -3799346270011975685
+    second: ComputerLoadingAnimation_18
   - first:
-      213: 7541164459022458036
-    second: ComputerLoadingAnimation-Sheet_19
+      213: -3398628832637515859
+    second: ComputerLoadingAnimation_19
   - first:
-      213: 6432304766076825619
-    second: ComputerLoadingAnimation-Sheet_20
+      213: 3088779266185419493
+    second: ComputerLoadingAnimation_20
   - first:
-      213: -8498936360667851033
-    second: ComputerLoadingAnimation-Sheet_21
+      213: -5279997135158296093
+    second: ComputerLoadingAnimation_21
   - first:
-      213: 9139252895703980251
-    second: ComputerLoadingAnimation-Sheet_22
+      213: -6129849199661000473
+    second: ComputerLoadingAnimation_22
   - first:
-      213: 4726346079276422416
-    second: ComputerLoadingAnimation-Sheet_23
+      213: 1590562263431887223
+    second: ComputerLoadingAnimation_23
   - first:
-      213: -6083940309367993355
-    second: ComputerLoadingAnimation-Sheet_24
+      213: -204965626808570218
+    second: ComputerLoadingAnimation_24
   - first:
-      213: 4181326166447730201
-    second: ComputerLoadingAnimation-Sheet_25
+      213: 6731454558669623800
+    second: ComputerLoadingAnimation_25
   - first:
-      213: 4771748662754219187
-    second: ComputerLoadingAnimation-Sheet_26
+      213: 2630434310766919150
+    second: ComputerLoadingAnimation_26
+  - first:
+      213: 499976522445714650
+    second: ComputerLoadingAnimation_27
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -178,7 +181,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_0
+      name: ComputerLoadingAnimation_0
       rect:
         serializedVersion: 2
         x: 63
@@ -193,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c529bceb642e92a0800000000000000
-      internalID: -6728900747293284927
+      spriteID: 478611b2489a35a10800000000000000
+      internalID: 1897046253176449140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_1
+      name: ComputerLoadingAnimation_1
       rect:
         serializedVersion: 2
         x: 383
@@ -215,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b63d7fe0b98aa890800000000000000
-      internalID: -7445987640878483788
+      spriteID: ffc3d878df6e656f0800000000000000
+      internalID: -696115115806868225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_2
+      name: ComputerLoadingAnimation_2
       rect:
         serializedVersion: 2
         x: 703
@@ -237,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc50b3bccf8be61f0800000000000000
-      internalID: -1049698267249834545
+      spriteID: 09e54a87b25296090800000000000000
+      internalID: -8040854791055450480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_3
+      name: ComputerLoadingAnimation_3
       rect:
         serializedVersion: 2
         x: 1023
@@ -259,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e2f789e77f561900800000000000000
-      internalID: 654815764452733664
+      spriteID: 9f9a35a2e0bc8b980800000000000000
+      internalID: -8522839033098556935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_4
+      name: ComputerLoadingAnimation_4
       rect:
         serializedVersion: 2
         x: 1343
@@ -281,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 82fdd7bf83f6866e0800000000000000
-      internalID: -1844101756880036056
+      spriteID: f1ae318de7d564d30800000000000000
+      internalID: 4415319284055796255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_5
+      name: ComputerLoadingAnimation_5
       rect:
         serializedVersion: 2
         x: 1663
@@ -303,14 +306,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3064332102749f080800000000000000
-      internalID: -9153206564583946749
+      spriteID: 4bd2e3202300c28e0800000000000000
+      internalID: -1716997143149007436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_6
+      name: ComputerLoadingAnimation_6
       rect:
         serializedVersion: 2
         x: 1983
@@ -325,14 +328,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12864af1810c68b40800000000000000
-      internalID: 5442248409566439457
+      spriteID: c41d7474228ab51d0800000000000000
+      internalID: -3360907831723699892
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_7
+      name: ComputerLoadingAnimation_7
       rect:
         serializedVersion: 2
         x: 2303
@@ -347,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0c5c2b781dd32fd0800000000000000
-      internalID: -2367805881851290609
+      spriteID: 9c39e7c52f7a18880800000000000000
+      internalID: -8610416353179954231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_8
+      name: ComputerLoadingAnimation_8
       rect:
         serializedVersion: 2
         x: 2623
@@ -369,14 +372,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91b079d85ec746280800000000000000
-      internalID: -9050972025743013095
+      spriteID: 387987205abe70e20800000000000000
+      internalID: 3316878744525248387
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_9
+      name: ComputerLoadingAnimation_9
       rect:
         serializedVersion: 2
         x: 2943
@@ -391,14 +394,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 41d6faf0ecc891b20800000000000000
-      internalID: 3105668234702974228
+      spriteID: 4306726fb90ac9b00800000000000000
+      internalID: 836720222494220340
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_10
+      name: ComputerLoadingAnimation_10
       rect:
         serializedVersion: 2
         x: 3263
@@ -413,14 +416,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 863260eb5ff254000800000000000000
-      internalID: 19474505894601576
+      spriteID: 21cbc0d908077cfe0800000000000000
+      internalID: -1168841880586372078
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_11
+      name: ComputerLoadingAnimation_11
       rect:
         serializedVersion: 2
         x: 3583
@@ -435,14 +438,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75f9c0a6854f245a0800000000000000
-      internalID: -6538395048415027369
+      spriteID: 394667766ed730110800000000000000
+      internalID: 1225961952106669203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_12
+      name: ComputerLoadingAnimation_12
       rect:
         serializedVersion: 2
         x: 3903
@@ -457,14 +460,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5639a6cd33b6a4b10800000000000000
-      internalID: 1966502057786119013
+      spriteID: d071cd7f2db6d85a0800000000000000
+      internalID: -6517434531889539315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_13
+      name: ComputerLoadingAnimation_13
       rect:
         serializedVersion: 2
         x: 4223
@@ -479,14 +482,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e9747bfbf39ccd50800000000000000
-      internalID: 6758939851241060840
+      spriteID: 25ba7ad15a0cd72c0800000000000000
+      internalID: -4432174642863035566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_14
+      name: ComputerLoadingAnimation_14
       rect:
         serializedVersion: 2
         x: 4543
@@ -501,14 +504,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7f4d6b67312b4760800000000000000
-      internalID: 7443079331069120380
+      spriteID: 7340e86b56f697200800000000000000
+      internalID: 178296142902985783
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_15
+      name: ComputerLoadingAnimation_15
       rect:
         serializedVersion: 2
         x: 4863
@@ -523,14 +526,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 77bbb954bd97cba70800000000000000
-      internalID: 8844077750921444215
+      spriteID: 0239e9d530e4be770800000000000000
+      internalID: 8641086086402970400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_16
+      name: ComputerLoadingAnimation_16
       rect:
         serializedVersion: 2
         x: 5183
@@ -545,14 +548,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb920ba1579c63e90800000000000000
-      internalID: -7046223062178453057
+      spriteID: fd43d9a03f266bcc0800000000000000
+      internalID: -3695657648216263457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_17
+      name: ComputerLoadingAnimation_17
       rect:
         serializedVersion: 2
         x: 5503
@@ -567,14 +570,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5f95887a97831d0d0800000000000000
-      internalID: -3399874148535084555
+      spriteID: 097159167338821a0800000000000000
+      internalID: -6834068160651126896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_18
+      name: ComputerLoadingAnimation_18
       rect:
         serializedVersion: 2
         x: 5823
@@ -589,14 +592,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b784871dea3b490f0800000000000000
-      internalID: -1111065644633667461
+      spriteID: bf71b3d72b2064bc0800000000000000
+      internalID: -3799346270011975685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_19
+      name: ComputerLoadingAnimation_19
       rect:
         serializedVersion: 2
         x: 6143
@@ -611,14 +614,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4bc95d4ee1997a860800000000000000
-      internalID: 7541164459022458036
+      spriteID: da78d3b5515a5d0d0800000000000000
+      internalID: -3398628832637515859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_20
+      name: ComputerLoadingAnimation_20
       rect:
         serializedVersion: 2
         x: 6463
@@ -633,14 +636,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 310bf0dda13244950800000000000000
-      internalID: 6432304766076825619
+      spriteID: 5ead296a06c8dda20800000000000000
+      internalID: 3088779266185419493
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_21
+      name: ComputerLoadingAnimation_21
       rect:
         serializedVersion: 2
         x: 6783
@@ -655,14 +658,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e6ddb5c866bd0a80800000000000000
-      internalID: -8498936360667851033
+      spriteID: 3e14fc7849ea9b6b0800000000000000
+      internalID: -5279997135158296093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_22
+      name: ComputerLoadingAnimation_22
       rect:
         serializedVersion: 2
         x: 7103
@@ -677,14 +680,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bd855e8361625de70800000000000000
-      internalID: 9139252895703980251
+      spriteID: 7e85e7751a66eeaa0800000000000000
+      internalID: -6129849199661000473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_23
+      name: ComputerLoadingAnimation_23
       rect:
         serializedVersion: 2
         x: 7423
@@ -699,14 +702,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 015d4d4c7ba579140800000000000000
-      internalID: 4726346079276422416
+      spriteID: 779bff093ffc21610800000000000000
+      internalID: 1590562263431887223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_24
+      name: ComputerLoadingAnimation_24
       rect:
         serializedVersion: 2
         x: 7743
@@ -721,14 +724,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5fbc071d580819ba0800000000000000
-      internalID: -6083940309367993355
+      spriteID: 69ee8ee29d0d72df0800000000000000
+      internalID: -204965626808570218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_25
+      name: ComputerLoadingAnimation_25
       rect:
         serializedVersion: 2
         x: 8063
@@ -743,14 +746,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 91ea929aefd070a30800000000000000
-      internalID: 4181326166447730201
+      spriteID: 8f1df2f914eea6d50800000000000000
+      internalID: 6731454558669623800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerLoadingAnimation-Sheet_26
+      name: ComputerLoadingAnimation_26
       rect:
         serializedVersion: 2
         x: 8383
@@ -765,8 +768,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3b419e08028a83240800000000000000
-      internalID: 4771748662754219187
+      spriteID: eedf24aa11e218420800000000000000
+      internalID: 2630434310766919150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ComputerLoadingAnimation_27
+      rect:
+        serializedVersion: 2
+        x: 8703
+        y: 0
+        width: 193
+        height: 194
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad479688ff540f600800000000000000
+      internalID: 499976522445714650
       vertices: []
       indices: 
       edges: []
@@ -775,7 +800,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b4cc8274d3cee0a4698a25a603526c1b
+    spriteID: 9855c12cf9723354791a26c39dfd14b1
     internalID: 0
     vertices: []
     indices: 
@@ -785,33 +810,34 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ComputerLoadingAnimation-Sheet_0: -6728900747293284927
-      ComputerLoadingAnimation-Sheet_1: -7445987640878483788
-      ComputerLoadingAnimation-Sheet_10: 19474505894601576
-      ComputerLoadingAnimation-Sheet_11: -6538395048415027369
-      ComputerLoadingAnimation-Sheet_12: 1966502057786119013
-      ComputerLoadingAnimation-Sheet_13: 6758939851241060840
-      ComputerLoadingAnimation-Sheet_14: 7443079331069120380
-      ComputerLoadingAnimation-Sheet_15: 8844077750921444215
-      ComputerLoadingAnimation-Sheet_16: -7046223062178453057
-      ComputerLoadingAnimation-Sheet_17: -3399874148535084555
-      ComputerLoadingAnimation-Sheet_18: -1111065644633667461
-      ComputerLoadingAnimation-Sheet_19: 7541164459022458036
-      ComputerLoadingAnimation-Sheet_2: -1049698267249834545
-      ComputerLoadingAnimation-Sheet_20: 6432304766076825619
-      ComputerLoadingAnimation-Sheet_21: -8498936360667851033
-      ComputerLoadingAnimation-Sheet_22: 9139252895703980251
-      ComputerLoadingAnimation-Sheet_23: 4726346079276422416
-      ComputerLoadingAnimation-Sheet_24: -6083940309367993355
-      ComputerLoadingAnimation-Sheet_25: 4181326166447730201
-      ComputerLoadingAnimation-Sheet_26: 4771748662754219187
-      ComputerLoadingAnimation-Sheet_3: 654815764452733664
-      ComputerLoadingAnimation-Sheet_4: -1844101756880036056
-      ComputerLoadingAnimation-Sheet_5: -9153206564583946749
-      ComputerLoadingAnimation-Sheet_6: 5442248409566439457
-      ComputerLoadingAnimation-Sheet_7: -2367805881851290609
-      ComputerLoadingAnimation-Sheet_8: -9050972025743013095
-      ComputerLoadingAnimation-Sheet_9: 3105668234702974228
+      ComputerLoadingAnimation_0: 1897046253176449140
+      ComputerLoadingAnimation_1: -696115115806868225
+      ComputerLoadingAnimation_10: -1168841880586372078
+      ComputerLoadingAnimation_11: 1225961952106669203
+      ComputerLoadingAnimation_12: -6517434531889539315
+      ComputerLoadingAnimation_13: -4432174642863035566
+      ComputerLoadingAnimation_14: 178296142902985783
+      ComputerLoadingAnimation_15: 8641086086402970400
+      ComputerLoadingAnimation_16: -3695657648216263457
+      ComputerLoadingAnimation_17: -6834068160651126896
+      ComputerLoadingAnimation_18: -3799346270011975685
+      ComputerLoadingAnimation_19: -3398628832637515859
+      ComputerLoadingAnimation_2: -8040854791055450480
+      ComputerLoadingAnimation_20: 3088779266185419493
+      ComputerLoadingAnimation_21: -5279997135158296093
+      ComputerLoadingAnimation_22: -6129849199661000473
+      ComputerLoadingAnimation_23: 1590562263431887223
+      ComputerLoadingAnimation_24: -204965626808570218
+      ComputerLoadingAnimation_25: 6731454558669623800
+      ComputerLoadingAnimation_26: 2630434310766919150
+      ComputerLoadingAnimation_27: 499976522445714650
+      ComputerLoadingAnimation_3: -8522839033098556935
+      ComputerLoadingAnimation_4: 4415319284055796255
+      ComputerLoadingAnimation_5: -1716997143149007436
+      ComputerLoadingAnimation_6: -3360907831723699892
+      ComputerLoadingAnimation_7: -8610416353179954231
+      ComputerLoadingAnimation_8: 3316878744525248387
+      ComputerLoadingAnimation_9: 836720222494220340
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
