@@ -18,20 +18,33 @@ Some more dialogue(Maybe?)
 
 public class IntroCutsceneManager : MonoBehaviour
 {
+    [Header("Dialogue")]
     public JsonTextLoader dialogue0;
     public JsonTextLoader dialogue1;
     public JsonTextLoader dialogue2;
+    public JsonTextLoader wrongPasswordDialogue;
 
+    [Header("UI")]
     public GameObject powerButton;
+    public GameObject dialogueBox;
+
+    [Header("Login")]
+    public LoginManager loginManager;
+
+    [Header("Animatior")]
     public Animator animator;
+
+    
 
     void Start()
     {
+        dialogueBox.SetActive(false);
+
         if (dialogue0.dialogueFinished == null)
             dialogue0.dialogueFinished = new UnityEvent();
 
         dialogue0.dialogueFinished.AddListener(() => DialogueFinished(0));
-/*
+
         if (dialogue1.dialogueFinished == null)
             dialogue1.dialogueFinished = new UnityEvent();
 
@@ -40,7 +53,13 @@ public class IntroCutsceneManager : MonoBehaviour
         if (dialogue2.dialogueFinished == null)
             dialogue2.dialogueFinished = new UnityEvent();
 
-        dialogue2.dialogueFinished.AddListener(() => DialogueFinished(2)); */
+        dialogue2.dialogueFinished.AddListener(() => DialogueFinished(2)); 
+
+        if(wrongPasswordDialogue.dialogueFinished == null)
+            wrongPasswordDialogue.dialogueFinished = new UnityEvent();
+        wrongPasswordDialogue.dialogueFinished.AddListener(() => DialogueFinished(3));
+
+        dialogueBox.SetActive(true);
     }
 
     void Update()
@@ -51,6 +70,7 @@ public class IntroCutsceneManager : MonoBehaviour
     public void DialogueFinished(int dialogueIndex)
     {
         print("Finished dialogue" + dialogueIndex);
+        dialogueBox.SetActive(false); //hides when dialgoue ends
 
         switch(dialogueIndex) {
             case 0:
@@ -61,9 +81,14 @@ public class IntroCutsceneManager : MonoBehaviour
             case 1:
                 //Blinking cursor
                 //Enable password input
+                loginManager.EnableInput();
                 break;
             case 2:
                 //Player sucked in animation
+                break;
+            case 3:
+            //Wrong password dialogue done -> re-enable input so player retries
+                loginManager.EnableInput();
                 break;
         }
     }
@@ -89,6 +114,19 @@ public class IntroCutsceneManager : MonoBehaviour
         powerButton.GetComponent<Button>().enabled = false;
         powerButton.GetComponent<Blink>().enabled = false;
 
+        loginManager.ShowLogin();
+        dialogueBox.SetActive(true);
         dialogue1.waitForStart = false;
+    }
+
+    public void CorrectPassword()
+    {
+        StartCoroutine(GlitchAndContinue());
+    }
+
+    public IEnumerator GlitchAndContinue()
+    {
+        yield return null;
+        //will play glitch annimation and do dialogue 3
     }
 }

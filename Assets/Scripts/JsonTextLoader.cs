@@ -136,6 +136,26 @@ public class JsonTextLoader : MonoBehaviour
         }
     }
 
+    public void ReplayDialogue()
+    {
+        // Reset story back to the start knot
+        inkStory = new Story(inkJSON.text);
+        if (!string.IsNullOrEmpty(startKnot))
+            inkStory.ChoosePathString(startKnot);
+ 
+        // Reset state
+        isTyping = false;
+        waitingForInput = false;
+        started = false;
+        currentLine = "";
+        textComponent.text = "";
+ 
+        // Re-activate and start
+        gameObject.SetActive(true);
+        waitForStart = false;
+    }
+
+
     IEnumerator TypeoutEffect(string lineToType)
     {
         isTyping = true;
