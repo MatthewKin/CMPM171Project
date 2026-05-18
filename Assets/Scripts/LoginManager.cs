@@ -68,6 +68,7 @@ public class LoginManager : MonoBehaviour
     public void ShowLogin()
     {
         loginBox.SetActive(true);
+        loginButton.SetActive(true);
     }
 
     // Called by IntroCutsceneManager after dialogue 1 ends (and after wrong password dialogue ends)
@@ -76,7 +77,6 @@ public class LoginManager : MonoBehaviour
         acceptingInput = true;
         currentInput = "";
         passwordText.text = "";
-        loginButton.SetActive(true);
  
         if (cursor != null)
         {
@@ -111,7 +111,7 @@ public class LoginManager : MonoBehaviour
         {
             // Wrong password — stop input, show the dialogue box, play wrong password dialogue
             acceptingInput = false;
-            loginButton.SetActive(false);
+            //loginButton.SetActive(false);
  
             FindObjectOfType<IntroCutsceneManager>().dialogueBox.SetActive(true);
             wrongPasswordDialogue.ReplayDialogue();

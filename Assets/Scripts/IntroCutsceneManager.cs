@@ -34,7 +34,7 @@ public class IntroCutsceneManager : MonoBehaviour
     [Header("Animatior")]
     public Animator animator;
 
-    
+    public ScreenGlitchEffect screenGlitch;
 
     void Start()
     {
@@ -85,6 +85,7 @@ public class IntroCutsceneManager : MonoBehaviour
                 break;
             case 2:
                 //Player sucked in animation
+                screenGlitch.StartGlitchSequence();
                 break;
             case 3:
             //Wrong password dialogue done -> re-enable input so player retries
@@ -126,7 +127,13 @@ public class IntroCutsceneManager : MonoBehaviour
 
     public IEnumerator GlitchAndContinue()
     {
-        yield return null;
         //will play glitch annimation and do dialogue 3
+        animator.Play("ComputerGlitch");
+        yield return null;
+        float duration = animator.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(duration);
+
+        dialogueBox.SetActive(true);
+        dialogue2.waitForStart = false; 
     }
 }
