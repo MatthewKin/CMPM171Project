@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using TMPro;
 using System.Collections;
 using Ink.Runtime;
@@ -13,6 +14,7 @@ public class JsonTextLoader : MonoBehaviour
     public TextMeshProUGUI textComponent;
     public AudioSource audioSource;
     public AudioClip glitchSound;
+    public UnityEvent dialogueFinished;
 
     [Header("Ink Settings")]  
     public string startKnot; //This will be accessing the Ink knots such as "Tutotial1_Elara" 
@@ -21,6 +23,7 @@ public class JsonTextLoader : MonoBehaviour
     [Header("Timings")]
     public float delayBeforeStart = 0f;
     public float typeSpeed = 0.05f;
+    public bool waitForStart = false;
     
     [Header("EvilMan Auto-Advance")]
     public float delayBeforeFade = 2f; // Time to wait after a line finishes before auto-advancing
@@ -41,6 +44,7 @@ public class JsonTextLoader : MonoBehaviour
     private Coroutine typingCoroutine;
     private Vector3 originalPos;
     private Vector3 originalScale;
+    private bool started = false;
 
     // FIX: Changed 'void' to 'IEnumerator' to allow yield return
     IEnumerator Start()
@@ -62,21 +66,31 @@ public class JsonTextLoader : MonoBehaviour
             inkStory.ChoosePathString(startKnot);
         }
         
-        if (delayBeforeStart > 0f)
+        if (delayBeforeStart > 0f && !waitForStart)
         {
             yield return new WaitForSeconds(delayBeforeStart);
+            started = true;
             PlayNextLine();
         }
     }
 
     void Update()
-        {
+    {
         // Simple input check
-            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        {
+            if(!waitForStart) 
             {
                 HandleInput();
             }
         }
+
+        if(!started && !waitForStart) {
+            started = true;
+            PlayNextLine();
+        }
+    }
+
     private void HandleInput()
     {
         if (isTyping)
@@ -114,8 +128,33 @@ public class JsonTextLoader : MonoBehaviour
         else
         {
             gameObject.SetActive(false); // Hide text when story ends
+            //dialogue ends
+            if(dialogueFinished != null)
+            {
+                dialogueFinished.Invoke();
+            }
         }
     }
+
+    public void ReplayDialogue()
+    {
+        // Reset story back to the start knot
+        inkStory = new Story(inkJSON.text);
+        if (!string.IsNullOrEmpty(startKnot))
+            inkStory.ChoosePathString(startKnot);
+ 
+        // Reset state
+        isTyping = false;
+        waitingForInput = false;
+        started = false;
+        currentLine = "";
+        textComponent.text = "";
+ 
+        // Re-activate and start
+        gameObject.SetActive(true);
+        waitForStart = false;
+    }
+
 
     IEnumerator TypeoutEffect(string lineToType)
     {
