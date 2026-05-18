@@ -53,7 +53,14 @@ public class ScreenGlitchEffect : MonoBehaviour
         glitchOverlay.color = new Color(c.r, c.g, c.b, 1f);
 
         // Hide everything underneath — player can't see it since overlay is fully opaque
-        FindObjectOfType<IntroCutsceneManager>().gameObject.SetActive(false);
+        Transform canvas = FindObjectOfType<IntroCutsceneManager>().transform;
+        foreach (Transform child in transform)
+        {
+            if(child.gameObject.name != "GlitchOverlay")
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
 
         // CRT squish the overlay itself
         elapsed = 0f;

@@ -1,10 +1,31 @@
 fileFormatVersion: 2
-guid: 237653d49496ffd4e8bd8e5ba13c3adf
+guid: 4afb14377daa8724f95cfb5229520212
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4860903520935050788
-    second: ComputerGlitch-Sheet_0
+      213: 8513281355493067688
+    second: ComputerGlitch-Sheet-Sheet_0
+  - first:
+      213: 7455050491102602178
+    second: ComputerGlitch-Sheet-Sheet_1
+  - first:
+      213: -3922539639189815389
+    second: ComputerGlitch-Sheet-Sheet_2
+  - first:
+      213: -8932376398990617413
+    second: ComputerGlitch-Sheet-Sheet_3
+  - first:
+      213: -2901966110208098886
+    second: ComputerGlitch-Sheet-Sheet_4
+  - first:
+      213: -2162045349442385032
+    second: ComputerGlitch-Sheet-Sheet_5
+  - first:
+      213: 4046400695886238011
+    second: ComputerGlitch-Sheet-Sheet_6
+  - first:
+      213: -113796803358900587
+    second: ComputerGlitch-Sheet-Sheet_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,177 +121,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ComputerGlitch-Sheet_0
+      name: ComputerGlitch-Sheet-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 191
+        width: 193
         height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd1883b700a9a8cb0800000000000000
-      internalID: -4860903520935050788
+      spriteID: 8abce1b9940452670800000000000000
+      internalID: 8513281355493067688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerGlitch-Sheet_1
+      name: ComputerGlitch-Sheet-Sheet_1
       rect:
         serializedVersion: 2
-        x: 191
+        x: 193
         y: 0
-        width: 191
-        height: 195
+        width: 193
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: a938b9b5dde865648b98b8ce363fac9b
-      internalID: 2049706844
+      spriteID: 2c3a5c05ce8a57760800000000000000
+      internalID: 7455050491102602178
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerGlitch-Sheet_2
+      name: ComputerGlitch-Sheet-Sheet_2
       rect:
         serializedVersion: 2
-        x: 382
+        x: 386
         y: 0
-        width: 191
-        height: 195
+        width: 193
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: cc14e6863679d00429f05711142a836b
-      internalID: -1543186068
+      spriteID: 3afb3bc0bf65099c0800000000000000
+      internalID: -3922539639189815389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerGlitch-Sheet_3
+      name: ComputerGlitch-Sheet-Sheet_3
       rect:
         serializedVersion: 2
-        x: 573
+        x: 579
         y: 0
-        width: 191
-        height: 195
+        width: 193
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 99d4c0bdd1723bf40be4c13760a088ff
-      internalID: 27184942
+      spriteID: bb4d41aadf2d90480800000000000000
+      internalID: -8932376398990617413
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerGlitch-Sheet_4
+      name: ComputerGlitch-Sheet-Sheet_4
       rect:
         serializedVersion: 2
-        x: 764
+        x: 772
         y: 0
-        width: 191
-        height: 195
+        width: 193
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: f8fa4be8ba077594ca3095b2d3cbbef5
-      internalID: 1967650729
+      spriteID: abdf2d2b2352ab7d0800000000000000
+      internalID: -2901966110208098886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerGlitch-Sheet_5
+      name: ComputerGlitch-Sheet-Sheet_5
       rect:
         serializedVersion: 2
-        x: 955
+        x: 965
         y: 0
-        width: 191
-        height: 195
+        width: 193
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 927eb58aa08edde4ca5f05791da17eb0
-      internalID: -1542363038
+      spriteID: 87b833ea53fdef1e0800000000000000
+      internalID: -2162045349442385032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerGlitch-Sheet_6
+      name: ComputerGlitch-Sheet-Sheet_6
       rect:
         serializedVersion: 2
-        x: 1146
+        x: 1158
         y: 0
-        width: 191
-        height: 195
+        width: 193
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: b766ea1d3923b1e42832debf60efe190
-      internalID: -1816410720
+      spriteID: b3151318ef3b72830800000000000000
+      internalID: 4046400695886238011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ComputerGlitch-Sheet_7
+      name: ComputerGlitch-Sheet-Sheet_7
       rect:
         serializedVersion: 2
-        x: 1337
+        x: 1351
         y: 0
-        width: 191
-        height: 195
+        width: 193
+        height: 194
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5a204fede85c9784280d5df28afafccd
-      internalID: 117952005
+      spriteID: 59eb7370966bb6ef0800000000000000
+      internalID: -113796803358900587
       vertices: []
       indices: 
       edges: []
@@ -279,7 +300,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 72849c80e7be88949b36df1292a74f3d
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -287,18 +308,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":191.0,"y":195.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      ComputerGlitch-Sheet_0: -4860903520935050788
-      ComputerGlitch-Sheet_1: 2049706844
-      ComputerGlitch-Sheet_2: -1543186068
-      ComputerGlitch-Sheet_3: 27184942
-      ComputerGlitch-Sheet_4: 1967650729
-      ComputerGlitch-Sheet_5: -1542363038
-      ComputerGlitch-Sheet_6: -1816410720
-      ComputerGlitch-Sheet_7: 117952005
+      ComputerGlitch-Sheet-Sheet_0: 8513281355493067688
+      ComputerGlitch-Sheet-Sheet_1: 7455050491102602178
+      ComputerGlitch-Sheet-Sheet_2: -3922539639189815389
+      ComputerGlitch-Sheet-Sheet_3: -8932376398990617413
+      ComputerGlitch-Sheet-Sheet_4: -2901966110208098886
+      ComputerGlitch-Sheet-Sheet_5: -2162045349442385032
+      ComputerGlitch-Sheet-Sheet_6: 4046400695886238011
+      ComputerGlitch-Sheet-Sheet_7: -113796803358900587
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
