@@ -297,15 +297,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.b
-      value: 0.04130521
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
-      propertyPath: m_Color.g
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.r
-      value: 0.8490566
+      value: 0.14509805
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 890834987712436950, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
@@ -428,15 +428,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.043137256
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.g
-      value: 0.7830189
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.r
-      value: 0.14634037
+      value: 0.8509804
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 890834987712436950, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
@@ -1169,10 +1169,14 @@ MonoBehaviour:
   textComponent: {fileID: 748468026}
   audioSource: {fileID: 0}
   glitchSound: {fileID: 0}
+  dialogueFinished:
+    m_PersistentCalls:
+      m_Calls: []
   startKnot: Tutorial4_Elara
   dialogueMode: 0
   delayBeforeStart: 3
   typeSpeed: 0.05
+  waitForStart: 0
   delayBeforeFade: 2
   useGlitchOnType: 1
   shakeMagnitude: 2
@@ -1655,10 +1659,14 @@ MonoBehaviour:
   textComponent: {fileID: 1090667348}
   audioSource: {fileID: 0}
   glitchSound: {fileID: 0}
+  dialogueFinished:
+    m_PersistentCalls:
+      m_Calls: []
   startKnot: Tutorial4_EvilMan
   dialogueMode: 1
   delayBeforeStart: 0.1
   typeSpeed: 0.05
+  waitForStart: 0
   delayBeforeFade: 2
   useGlitchOnType: 1
   shakeMagnitude: 2

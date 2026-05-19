@@ -32,6 +32,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        // Press R to reset
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetGame();
+        }
+    }
+
     // button commands
     public void ResetGame()
     {
