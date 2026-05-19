@@ -2,23 +2,35 @@
 Alright...
 Let's see here, looks like were all set up correctly.
 For a shitty old PC it doesn't look too bad, I did get a nice deal at that garage sale. 
-Well, now to see if she really works.
+Now to see if she really works.
+I'm pretty sure this red button will turn her on.
 ->END
 === Intro_Elara_Dialogue1 ===
 Huh, thats one colorful login. 
-
+I didn't expect it to be so...pink, perhaps something...muted.
+A bang for a buck I suppose. 
+Hmm, let's try the password they gave me. 
 ->END
 === Intro_Elara_Dialogue2 ===
+Oh goodness...
 I'm not sure if I like that...
-Perhaps its just something with the screen, I mean it is pretty old...
-looking....
+I take back my "bang for a buck" statement.
+Wait...
+Something doesn't feel right.
+&&*% %$^&()
+->END
+=== Intro_Elara_WrongPassword ===
+No, that's not quite right, I hope I didn't write down the wrong password.
 ->END
 === Tutorial1_Elara ===
+&&*% %$^&()
+What the-
 Well this isn't good...
 My body, my hair...
-It's like I'm not even myself. 
+I'm...pixelated?
+Ugh, not a great start to a weekend. 
 Well, no use in questioning it now, no matter how odd. 
-I gotta find a way out of here. 
+I gotta find a way out of here, this, me? Whatever.
 Perhaps, if I use these windows I can get to that red one over there. 
 ->END
 === Tutorial2_Elara ===
