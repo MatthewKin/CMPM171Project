@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 768040392}
   - component: {fileID: 768040391}
   m_Layer: 5
-  m_Name: SttickyNote
+  m_Name: StickyNote
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
