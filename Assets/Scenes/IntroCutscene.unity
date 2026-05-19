@@ -605,7 +605,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  startKnot: Tutorial4_Elara
+  startKnot: Intro_Elara_WrongPassword
   dialogueMode: 0
   delayBeforeStart: 2
   typeSpeed: 0.05
