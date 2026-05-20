@@ -1,26 +1,26 @@
 === Intro_Elara_Dialogue0 ===
-Alright...
-Let's see here, looks like were all set up correctly.
-For a shitty old PC it doesn't look too bad, I did get a nice deal at that garage sale. 
-Now to see if she really works.
+Alright... # elara:neutral
+Let's see here, looks like were all set up correctly. # elara:happy
+For a shitty old PC it doesn't look too bad, I did get a nice deal at that garage sale. # elara:happywink
+Now to see if she really works. # elara:happy
 I'm pretty sure this red button will turn her on.
 ->END
 === Intro_Elara_Dialogue1 ===
-Huh, thats one colorful login. 
-I didn't expect it to be so...pink, perhaps something...muted.
+Huh, thats one colorful login. # elara:neutral
+I didn't expect it to be so...pink, perhaps something...muted. # elara:hmtalking
 A bang for a buck I suppose. 
-Hmm, let's try the password they gave me. 
+Hmm, let's try the password they gave me. # elara:neutral
 ->END
 === Intro_Elara_Dialogue2 ===
-Oh goodness...
+Oh goodness... # elara:oopsweat
 I'm not sure if I like that...
 I take back my "bang for a buck" statement.
 Wait...
-Something doesn't feel right.
-&&*% %$^&()
+Something doesn't feel right. # elara:worried
+&&*% %$^&() # elara:worriedsweat
 ->END
 === Intro_Elara_WrongPassword ===
-No, that's not quite right, I hope I didn't write down the wrong password.
+No, that's not quite right, I hope I didn't write down the wrong password. # elara:hm
 ->END
 === Tutorial1_Elara ===
 &&*% %$^&()

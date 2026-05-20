@@ -616,6 +616,7 @@ MonoBehaviour:
   glitchDuration: 0.4
   flickerSpeed: 0.05
   fadeDuration: 1.5
+  cutsceneManager: {fileID: 861584795}
 --- !u!114 &383972118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1324,6 +1325,26 @@ MonoBehaviour:
   loginManager: {fileID: 861584796}
   animator: {fileID: 1408530606}
   screenGlitch: {fileID: 861584797}
+  portraitObjects:
+  - {fileID: 1785819663}
+  - {fileID: 1240326014}
+  - {fileID: 322753687}
+  - {fileID: 1910458561}
+  - {fileID: 170210119}
+  - {fileID: 555704972}
+  - {fileID: 899343230}
+  - {fileID: 974664505}
+  - {fileID: 171189420}
+  portraitKeys:
+  - happy
+  - happywink
+  - hm
+  - hmtalking
+  - neutral
+  - oop
+  - oopsweat
+  - worried
+  - worriedsweat
 --- !u!114 &861584796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1682,6 +1703,7 @@ MonoBehaviour:
   glitchDuration: 0.4
   flickerSpeed: 0.05
   fadeDuration: 1.5
+  cutsceneManager: {fileID: 861584795}
 --- !u!114 &1009871252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,6 +1963,7 @@ MonoBehaviour:
   glitchDuration: 0.4
   flickerSpeed: 0.05
   fadeDuration: 1.5
+  cutsceneManager: {fileID: 861584795}
 --- !u!114 &1157835049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2196,6 +2219,7 @@ MonoBehaviour:
   glitchDuration: 0.4
   flickerSpeed: 0.05
   fadeDuration: 1.5
+  cutsceneManager: {fileID: 861584795}
 --- !u!114 &1266813585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3086,7 +3110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1982652935
 RectTransform:
   m_ObjectHideFlags: 0
