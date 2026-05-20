@@ -9,7 +9,7 @@ I'm pretty sure this red button will turn her on.
 Huh, thats one colorful login. # elara:neutral
 I didn't expect it to be so...pink, perhaps something...muted. # elara:hmtalking
 A bang for a buck I suppose. 
-Hmm, let's try the password they gave me. # elara:neutral
+Hmm, let's try the password they gave me. # elara:happy
 ->END
 === Intro_Elara_Dialogue2 ===
 Oh goodness... # elara:oopsweat
