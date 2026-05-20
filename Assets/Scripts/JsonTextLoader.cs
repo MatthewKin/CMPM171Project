@@ -66,9 +66,13 @@ public class JsonTextLoader : MonoBehaviour
             inkStory.ChoosePathString(startKnot);
         }
         
-        if (delayBeforeStart > 0f && !waitForStart)
+        if (delayBeforeStart > 0f)
         {
             yield return new WaitForSeconds(delayBeforeStart);
+        }
+
+        if(!waitForStart)
+        {
             started = true;
             PlayNextLine();
         }
@@ -84,12 +88,13 @@ public class JsonTextLoader : MonoBehaviour
                 HandleInput();
             }
         }
-
-        if(!started && !waitForStart) {
+        if (!started && !waitForStart)
+        {
             started = true;
             PlayNextLine();
         }
     }
+    
 
     private void HandleInput()
     {

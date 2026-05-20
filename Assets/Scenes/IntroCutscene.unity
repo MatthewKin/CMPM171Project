@@ -607,7 +607,7 @@ MonoBehaviour:
         m_CallState: 2
   startKnot: Intro_Elara_WrongPassword
   dialogueMode: 0
-  delayBeforeStart: 2
+  delayBeforeStart: 0
   typeSpeed: 0.05
   waitForStart: 1
   delayBeforeFade: 2
@@ -1673,7 +1673,7 @@ MonoBehaviour:
         m_CallState: 2
   startKnot: Intro_Elara_Dialogue1
   dialogueMode: 0
-  delayBeforeStart: 2
+  delayBeforeStart: 1
   typeSpeed: 0.05
   waitForStart: 1
   delayBeforeFade: 2
@@ -1932,7 +1932,7 @@ MonoBehaviour:
         m_CallState: 2
   startKnot: Intro_Elara_Dialogue0
   dialogueMode: 0
-  delayBeforeStart: 2
+  delayBeforeStart: 0
   typeSpeed: 0.05
   waitForStart: 0
   delayBeforeFade: 2
@@ -2187,7 +2187,7 @@ MonoBehaviour:
         m_CallState: 2
   startKnot: Intro_Elara_Dialogue2
   dialogueMode: 0
-  delayBeforeStart: 2
+  delayBeforeStart: 0
   typeSpeed: 0.05
   waitForStart: 1
   delayBeforeFade: 2
