@@ -134,6 +134,7 @@ public class IntroCutsceneManager : MonoBehaviour
         loginManager.ShowLogin();
         dialogueBox.SetActive(true);
         dialogue1.waitForStart = false;
+        dialogue1.PlayNextLine(); 
     }
 
     public void CorrectPassword()
@@ -151,6 +152,7 @@ public class IntroCutsceneManager : MonoBehaviour
 
         dialogueBox.SetActive(true);
         dialogue2.waitForStart = false; 
+        dialogue2.PlayNextLine(); 
     }
 
     public void SetPortrait(string expression)
