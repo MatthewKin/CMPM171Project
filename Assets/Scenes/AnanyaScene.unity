@@ -195,7 +195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &441868630
 Transform:
   m_ObjectHideFlags: 0
@@ -304,6 +304,11 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+  animator: {fileID: 0}
+  groundCheckYOffset: -0.296
+  afterImagePrefab: {fileID: 0}
+  afterImageRate: 0.05
+  fadeSpeed: 1
 --- !u!212 &441868634
 SpriteRenderer:
   serializedVersion: 2
@@ -17487,6 +17492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   player: {fileID: 441868630}
   windows: []
+  glitchWindows: []
 --- !u!114 &1933963179
 MonoBehaviour:
   m_ObjectHideFlags: 0
