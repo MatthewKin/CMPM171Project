@@ -90,11 +90,6 @@ public class JsonTextLoader : MonoBehaviour
                 HandleInput();
             }
         }
-        if (!started && !waitForStart)
-        {
-            started = true;
-            PlayNextLine();
-        }
     }
     
 
@@ -117,9 +112,16 @@ public class JsonTextLoader : MonoBehaviour
         }
     }
 
-    private void PlayNextLine()
+    public void PlayNextLine()
     {
         Debug.Log($"canContinue: {inkStory.canContinue}, waitingForInput: {waitingForInput}, isTyping: {isTyping}");
+        if (isTyping)
+        {
+            //If typing, don't play line?
+            Debug.Log($"Tried to play next line while typing");
+            return;
+        }
+
         if(inkStory.canContinue)
         {
             string line = inkStory.Continue().Trim();

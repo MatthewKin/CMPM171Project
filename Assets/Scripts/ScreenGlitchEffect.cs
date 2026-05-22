@@ -62,19 +62,32 @@ public class ScreenGlitchEffect : MonoBehaviour
             }
         }
 
-        // CRT squish the overlay itself
+        // CRT squish — Y collapses to a thin line
         elapsed = 0f;
         Vector3 originalScale = overlayRect.localScale;
-        while (elapsed < crtShrinkDuration)
+        float half = crtShrinkDuration * 0.5f;
+        while (elapsed < half)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.Pow(elapsed / crtShrinkDuration, 2f);
+            float t = Mathf.Pow(elapsed / half, 2f);
             float newScaleY = Mathf.Lerp(1f, 0.005f, t);
             overlayRect.localScale = new Vector3(originalScale.x, newScaleY, originalScale.z);
             yield return null;
         }
 
+        // Hold the line briefly
         yield return new WaitForSeconds(lingerDuration);
+
+        // Then X collapses to nothing
+        elapsed = 0f;
+        while (elapsed < half)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Pow(elapsed / half, 2f);
+            float newScaleX = Mathf.Lerp(1f, 0f, t);
+            overlayRect.localScale = new Vector3(newScaleX, 0.005f, originalScale.z);
+            yield return null;
+        }
 
         overlayRect.localScale = Vector3.zero;
         yield return new WaitForSeconds(blackDuration);
