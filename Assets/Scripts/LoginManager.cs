@@ -115,6 +115,7 @@ public class LoginManager : MonoBehaviour
  
             FindObjectOfType<IntroCutsceneManager>().dialogueBox.SetActive(true);
             wrongPasswordDialogue.ReplayDialogue();
+            wrongPasswordDialogue.PlayNextLine(); 
         }
     }
 }

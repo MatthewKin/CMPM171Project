@@ -11,10 +11,10 @@ using System.Collections;
     when player clicks on the file screen glitch again and switch scenes to tutorial 1
 */
 
-public class IntroCutsceneManager : MonoBehaviour
+public class ComputerHubManager : MonoBehaviour
 {
     [Header("Dialogue")]
-    public JsonTextLoader Dialogue0;
+    public JsonTextLoader dialogue0;
 
     [Header("UI")]
     public GameObject tutorialFile;
@@ -71,9 +71,5 @@ public class IntroCutsceneManager : MonoBehaviour
         yield return null;
         float duration = animator.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSeconds(duration);
-
-        dialogueBox.SetActive(true);
-        dialogue2.waitForStart = false; 
-        dialogue2.PlayNextLine(); 
     }
 }
