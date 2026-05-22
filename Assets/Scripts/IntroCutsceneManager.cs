@@ -1,14 +1,3 @@
-/*Computer Off
-Some Dialogue
-Button starts to glow
-Click the red button to turn Computer On
-Computer turn on animation
-Some more dialogue
-Blinking cursor in password box (maybe)
-Player has to type in password
-Computer Launches -> Glitches
-Some more dialogue(Maybe?) 
-*/
 
 using UnityEngine;
 using UnityEngine.Events;
