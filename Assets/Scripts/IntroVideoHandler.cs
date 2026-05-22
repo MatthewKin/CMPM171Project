@@ -17,7 +17,7 @@ public class IntroVideoHandler : MonoBehaviour
     [Header("Behavior")]
     [Range(0f, 1f)]
     public float fadedAlpha = 0.3f;     
-    public float finalFadeDuration = 2f; // How long it takes to fade out at the very end
+    public float finalFadeDuration = 2f; // Total duration of the cross-fade transition
     public UnityEvent onVideoFaded;     
 
     private VideoPlayer videoPlayer;
@@ -39,7 +39,17 @@ public class IntroVideoHandler : MonoBehaviour
         videoPlayer.loopPointReached += OnVideoFinished;
 
         if (dialogueObject != null) dialogueObject.SetActive(false);
-        if (puzzleObject != null) puzzleObject.SetActive(false);
+        
+        // Ensure puzzle starts hidden and completely transparent if it has a CanvasGroup
+        if (puzzleObject != null)
+        {
+            puzzleObject.SetActive(false);
+            CanvasGroup canvasGroup = puzzleObject.GetComponent<CanvasGroup>();
+            if (canvasGroup != null)
+            {
+                canvasGroup.alpha = 0f;
+            }
+        }
     }
 
     void Start()
@@ -75,34 +85,62 @@ public class IntroVideoHandler : MonoBehaviour
     /// </summary>
     public void FinishDialogueAndLoadPuzzle()
     {
-        // Start the fading process instead of immediately destroying
-        StartCoroutine(FadeOutAndDestroy());
+        // Start the cross-fading process instead of immediately destroying
+        StartCoroutine(CrossFadeAndDestroy());
     }
 
-    private IEnumerator FadeOutAndDestroy()
+    private IEnumerator CrossFadeAndDestroy()
     {
-        float startAlpha = videoPlayer.targetCameraAlpha;
+        float startVideoAlpha = videoPlayer.targetCameraAlpha;
         float elapsed = 0f;
 
-        // Smoothly transition the alpha from its current state (0.3) to 0 over 2 seconds
-        while (elapsed < finalFadeDuration)
-        {
-            elapsed += Time.deltaTime;
-            videoPlayer.targetCameraAlpha = Mathf.Lerp(startAlpha, 0f, elapsed / finalFadeDuration);
-            yield return null; // Wait for the next frame
-        }
+        // Instantly hide dialogue UI so it doesn't clutter the cross-fade
+        if (dialogueObject != null) dialogueObject.SetActive(false);
 
-        // Ensure it's completely invisible at the end
-        videoPlayer.targetCameraAlpha = 0f;
+        CanvasGroup puzzleCanvasGroup = null;
 
-        // Now that the fade is done, load the puzzle and destroy the video
+        // Activate puzzle object and grab its CanvasGroup for fading
         if (puzzleObject != null)
         {
             puzzleObject.SetActive(true);
+            puzzleCanvasGroup = puzzleObject.GetComponent<CanvasGroup>();
+            if (puzzleCanvasGroup != null)
+            {
+                puzzleCanvasGroup.alpha = 0f; // Start completely see-through
+            }
+            else
+            {
+                Debug.LogWarning("PuzzleObject is missing a CanvasGroup component! It will appear instantly during the cross-fade.");
+            }
         }
 
-        if (dialogueObject != null) dialogueObject.SetActive(false);
+        // SIMULTANEOUS CROSS-FADE LOOP
+        // Both the video fading out and puzzle fading in happen inside this single loop
+        while (elapsed < finalFadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            float normalizedTime = elapsed / finalFadeDuration;
 
+            // Fade video out (from 0.3 down to 0)
+            videoPlayer.targetCameraAlpha = Mathf.Lerp(startVideoAlpha, 0f, normalizedTime);
+
+            // Fade puzzle in (from 0 up to 1)
+            if (puzzleCanvasGroup != null)
+            {
+                puzzleCanvasGroup.alpha = Mathf.Lerp(0f, 1f, normalizedTime);
+            }
+
+            yield return null; // Wait for the next frame
+        }
+
+        // Hard-set final values to ensure absolute precision at the end of the loop
+        videoPlayer.targetCameraAlpha = 0f;
+        if (puzzleCanvasGroup != null)
+        {
+            puzzleCanvasGroup.alpha = 1f;
+        }
+
+        // Destroy the video handler now that the visual transition is finished
         Destroy(gameObject);
     }
 }

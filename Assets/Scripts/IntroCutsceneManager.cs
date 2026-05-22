@@ -1,3 +1,15 @@
+/*Computer Off
+Some Dialogue
+Button starts to glow
+Click the red button to turn Computer On
+Computer turn on animation
+Some more dialogue
+Blinking cursor in password box (maybe)
+Player has to type in password
+Computer Launches -> Glitches
+Some more dialogue(Maybe?) 
+*/
+
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -35,6 +47,10 @@ public class IntroCutsceneManager : MonoBehaviour
     public Animator animator;
 
     public ScreenGlitchEffect screenGlitch;
+
+    [Header("Portraits")]
+    public GameObject[] portraitObjects;
+    public string[] portraitKeys;
 
     void Start()
     {
@@ -118,6 +134,7 @@ public class IntroCutsceneManager : MonoBehaviour
         loginManager.ShowLogin();
         dialogueBox.SetActive(true);
         dialogue1.waitForStart = false;
+        dialogue1.PlayNextLine(); 
     }
 
     public void CorrectPassword()
@@ -135,5 +152,15 @@ public class IntroCutsceneManager : MonoBehaviour
 
         dialogueBox.SetActive(true);
         dialogue2.waitForStart = false; 
+        dialogue2.PlayNextLine(); 
+    }
+
+    public void SetPortrait(string expression)
+    {
+        for (int i = 0; i < portraitKeys.Length; i++)
+        {
+            bool match = portraitKeys[i].ToLower() == expression;
+            portraitObjects[i].SetActive(match);
+        }
     }
 }

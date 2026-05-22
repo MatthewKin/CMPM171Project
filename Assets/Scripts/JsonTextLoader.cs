@@ -3,6 +3,7 @@ using UnityEngine.Events;
 using TMPro;
 using System.Collections;
 using Ink.Runtime;
+using System.Collections.Generic;
 
 
 public class JsonTextLoader : MonoBehaviour
@@ -45,6 +46,7 @@ public class JsonTextLoader : MonoBehaviour
     private Vector3 originalPos;
     private Vector3 originalScale;
     private bool started = false;
+    public IntroCutsceneManager cutsceneManager;
 
     // FIX: Changed 'void' to 'IEnumerator' to allow yield return
     IEnumerator Start()
@@ -66,9 +68,13 @@ public class JsonTextLoader : MonoBehaviour
             inkStory.ChoosePathString(startKnot);
         }
         
-        if (delayBeforeStart > 0f && !waitForStart)
+        if (delayBeforeStart > 0f)
         {
             yield return new WaitForSeconds(delayBeforeStart);
+        }
+
+        if(!waitForStart)
+        {
             started = true;
             PlayNextLine();
         }
@@ -84,12 +90,8 @@ public class JsonTextLoader : MonoBehaviour
                 HandleInput();
             }
         }
-
-        if(!started && !waitForStart) {
-            started = true;
-            PlayNextLine();
-        }
     }
+    
 
     private void HandleInput()
     {
@@ -110,12 +112,20 @@ public class JsonTextLoader : MonoBehaviour
         }
     }
 
-    private void PlayNextLine()
+    public void PlayNextLine()
     {
         Debug.Log($"canContinue: {inkStory.canContinue}, waitingForInput: {waitingForInput}, isTyping: {isTyping}");
+        if (isTyping)
+        {
+            //If typing, don't play line?
+            Debug.Log($"Tried to play next line while typing");
+            return;
+        }
+
         if(inkStory.canContinue)
         {
             string line = inkStory.Continue().Trim();
+            ProcessTags(inkStory.currentTags);
             if (string.IsNullOrEmpty(line))
             {
                 PlayNextLine();
@@ -235,5 +245,17 @@ public class JsonTextLoader : MonoBehaviour
 
         textComponent.color = OriginalColor; 
         PlayNextLine(); // Automatically advance to the next line after fade out
+    }
+
+    private void ProcessTags(List<string> tags)
+    {
+        foreach (string tag in tags)
+        {
+            string[] parts = tag.Trim().Split(':');
+            if (parts.Length == 2 && parts[0].Trim().ToLower() == "elara")
+            {
+                cutsceneManager?.SetPortrait(parts[1].Trim().ToLower());
+            }
+        }
     }
 }
