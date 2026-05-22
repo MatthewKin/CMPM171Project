@@ -52,13 +52,17 @@ public class ScreenGlitchEffect : MonoBehaviour
         }
         glitchOverlay.color = new Color(c.r, c.g, c.b, 1f);
 
-        // Hide everything underneath — player can't see it since overlay is fully opaque
-        Transform canvas = FindObjectOfType<IntroCutsceneManager>().transform;
-        foreach (Transform child in transform)
+        // FIX: Safely find the Canvas this overlay belongs to and hide other UI elements
+        Canvas parentCanvas = GetComponentInParent<Canvas>();
+        if (parentCanvas != null)
         {
-            if(child.gameObject.name != "GlitchOverlay")
+            foreach (Transform child in parentCanvas.transform)
             {
-                child.gameObject.SetActive(false);
+                // Don't deactivate the GlitchOverlay itself, or the video will stop!
+                if (child.gameObject != glitchOverlay.gameObject)
+                {
+                    child.gameObject.SetActive(false);
+                }
             }
         }
 

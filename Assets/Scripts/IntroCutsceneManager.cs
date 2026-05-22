@@ -15,18 +15,6 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using System.Collections;
 
-/*
-Computer Off
-Some Dialogue
-Button starts to glow
-Click the red button to turn Computer On
-Computer turn on animation
-Some more dialogue
-Blinking cursor in password box (maybe)
-Player has to type in password
-Computer Launches -> Glitches
-Some more dialogue(Maybe?) 
-*/
 
 public class IntroCutsceneManager : MonoBehaviour
 {
@@ -153,6 +141,7 @@ public class IntroCutsceneManager : MonoBehaviour
         dialogueBox.SetActive(true);
         dialogue2.waitForStart = false; 
         dialogue2.PlayNextLine(); 
+        
     }
 
     public void SetPortrait(string expression)
