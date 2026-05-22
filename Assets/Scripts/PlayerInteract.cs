@@ -66,11 +66,12 @@ public class PlayerInteract : MonoBehaviour
             {
                 teleporter.Teleport(gameObject);
 
-                // Prevent immediate bounce-back teleport
+                // Set the destination as current so we don't bounce back
                 currentTeleporter = teleporter.GetLinkedTeleport();
             }
         }
     }
+
 
     IEnumerator HandleLevelEnd()
     {
@@ -79,13 +80,6 @@ public class PlayerInteract : MonoBehaviour
         if (movement != null)
         {
             movement.enabled = false;
-        }
-
-        // Stop enemies from hitting player
-        Collider2D col = GetComponent<Collider2D>();
-        if (col != null)
-        {
-            col.enabled = false;
         }
 
         // Stop motion

@@ -297,15 +297,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.04130521
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.g
-      value: 0.78431374
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.r
-      value: 0.14509805
+      value: 0.8490566
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 890834987712436950, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
@@ -565,15 +565,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.b
-      value: 0.043137256
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
-      propertyPath: m_Color.g
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.r
-      value: 0.8509804
+      value: 0.14634037
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 890834987712436950, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
@@ -1021,14 +1021,10 @@ MonoBehaviour:
   textComponent: {fileID: 905339430}
   audioSource: {fileID: 0}
   glitchSound: {fileID: 0}
-  dialogueFinished:
-    m_PersistentCalls:
-      m_Calls: []
   startKnot: Tutorial2_Elara
   dialogueMode: 0
   delayBeforeStart: 0.5
   typeSpeed: 0.05
-  waitForStart: 0
   delayBeforeFade: 2
   useGlitchOnType: 1
   shakeMagnitude: 2
@@ -1228,11 +1224,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2307505058384599091, guid: 4598bad97693f4972b502b92d36049cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -4.6347
       objectReference: {fileID: 0}
     - target: {fileID: 2307505058384599091, guid: 4598bad97693f4972b502b92d36049cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 2.48705
       objectReference: {fileID: 0}
     - target: {fileID: 2307505058384599091, guid: 4598bad97693f4972b502b92d36049cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1420,14 +1416,10 @@ MonoBehaviour:
   textComponent: {fileID: 1202751620}
   audioSource: {fileID: 0}
   glitchSound: {fileID: 0}
-  dialogueFinished:
-    m_PersistentCalls:
-      m_Calls: []
   startKnot: Tutorial2_EvilMan
   dialogueMode: 1
   delayBeforeStart: 2
   typeSpeed: 0.05
-  waitForStart: 0
   delayBeforeFade: 2
   useGlitchOnType: 1
   shakeMagnitude: 0

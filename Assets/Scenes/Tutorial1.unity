@@ -296,15 +296,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.04130521
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.g
-      value: 0.78431374
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.r
-      value: 0.14509805
+      value: 0.8490566
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 890834987712436950, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
@@ -427,15 +427,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.b
-      value: 0.043137256
-      objectReference: {fileID: 0}
-    - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
-      propertyPath: m_Color.g
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7830189
+      objectReference: {fileID: 0}
+    - target: {fileID: 4852210855713360022, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_Color.r
-      value: 0.8509804
+      value: 0.14634037
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 890834987712436950, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
@@ -1056,7 +1056,7 @@ PrefabInstance:
     - target: {fileID: 8296621389273993674, guid: 4ca08bd369b1c4522973fb538b2b79be, type: 3}
       propertyPath: m_Resource
       value: 
-      objectReference: {fileID: 8300000, guid: 9487f66e3d4a444d384baf05535b4675, type: 3}
+      objectReference: {fileID: 8300000, guid: b749cd829f6d34f6ba7018262373962f, type: 3}
     - target: {fileID: 9004073849928716645, guid: 4ca08bd369b1c4522973fb538b2b79be, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.13847
@@ -1230,14 +1230,10 @@ MonoBehaviour:
   textComponent: {fileID: 773086892}
   audioSource: {fileID: 0}
   glitchSound: {fileID: 0}
-  dialogueFinished:
-    m_PersistentCalls:
-      m_Calls: []
   startKnot: Tutorial1_Elara
   dialogueMode: 0
   delayBeforeStart: 2
   typeSpeed: 0.05
-  waitForStart: 0
   delayBeforeFade: 2
   useGlitchOnType: 1
   shakeMagnitude: 2
@@ -1437,11 +1433,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4087131826023159234, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 4.77
       objectReference: {fileID: 0}
     - target: {fileID: 4087131826023159234, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -4.61
       objectReference: {fileID: 0}
     - target: {fileID: 4087131826023159234, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17879,7 +17875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1494421697
 MonoBehaviour:
   m_ObjectHideFlags: 0
