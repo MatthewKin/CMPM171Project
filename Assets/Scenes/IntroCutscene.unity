@@ -586,7 +586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2cfddc194ef8047adef4fbc401dcc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JsonTextLoader
-  inkJSON: {fileID: 4900000, guid: 2a3e25979269e844f895a22441e4cec1, type: 3}
+  inkJSON: {fileID: 4900000, guid: a3841003a11a528429c0c64510e8fb16, type: 3}
   textComponent: {fileID: 383972118}
   audioSource: {fileID: 0}
   glitchSound: {fileID: 0}
@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2cfddc194ef8047adef4fbc401dcc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JsonTextLoader
-  inkJSON: {fileID: 4900000, guid: 2a3e25979269e844f895a22441e4cec1, type: 3}
+  inkJSON: {fileID: 4900000, guid: a3841003a11a528429c0c64510e8fb16, type: 3}
   textComponent: {fileID: 1009871252}
   audioSource: {fileID: 0}
   glitchSound: {fileID: 0}
@@ -1982,7 +1982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2cfddc194ef8047adef4fbc401dcc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JsonTextLoader
-  inkJSON: {fileID: 4900000, guid: 2a3e25979269e844f895a22441e4cec1, type: 3}
+  inkJSON: {fileID: 4900000, guid: a3841003a11a528429c0c64510e8fb16, type: 3}
   textComponent: {fileID: 1157835049}
   audioSource: {fileID: 0}
   glitchSound: {fileID: 0}
@@ -2238,7 +2238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db2cfddc194ef8047adef4fbc401dcc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JsonTextLoader
-  inkJSON: {fileID: 4900000, guid: 2a3e25979269e844f895a22441e4cec1, type: 3}
+  inkJSON: {fileID: 4900000, guid: a3841003a11a528429c0c64510e8fb16, type: 3}
   textComponent: {fileID: 1266813585}
   audioSource: {fileID: 0}
   glitchSound: {fileID: 0}
