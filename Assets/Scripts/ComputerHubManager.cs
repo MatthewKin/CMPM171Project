@@ -27,7 +27,7 @@ public class ComputerHubManager : MonoBehaviour
 
     [Header("Player")]
     public TopDownPlayerWithBounds playerController;
-    void Start()
+    IEnumerator Start()
     {
          dialogueBox.SetActive(false);
         clickableFile.SetActive(false);
@@ -36,11 +36,16 @@ public class ComputerHubManager : MonoBehaviour
         if (playerController != null)
             playerController.enabled = false;
  
+        
+        StartCoroutine(TeleportInAnimation());
+
         if (dialogue0.dialogueFinished == null)
             dialogue0.dialogueFinished = new UnityEvent();
  
         dialogue0.dialogueFinished.AddListener(() => DialogueFinished(0));
- 
+
+        yield return new WaitForSeconds(1.5f); 
+
         dialogueBox.SetActive(true);
         dialogue0.waitForStart = false;
         dialogue0.PlayNextLine();
@@ -50,6 +55,16 @@ public class ComputerHubManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    IEnumerator TeleportInAnimation()
+    {
+        print("does this work?");
+        animator.SetBool("IsEnding", true);
+        animator.Play("TeleportReversed");
+        yield return new WaitForSeconds(1.2f);
+        animator.SetBool("IsEnding", false);
+        print("why no work");
     }
 
     public void DialogueFinished(int dialogueIndex)
