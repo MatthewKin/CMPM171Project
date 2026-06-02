@@ -40,6 +40,9 @@ public class IntroCutsceneManager : MonoBehaviour
     public GameObject[] portraitObjects;
     public string[] portraitKeys;
 
+    [Header("Scene Transition")]
+    public string nextSceneName;
+
     void Start()
     {
         dialogueBox.SetActive(false);
@@ -128,6 +131,7 @@ public class IntroCutsceneManager : MonoBehaviour
     public void CorrectPassword()
     {
         StartCoroutine(GlitchAndContinue());
+        
     }
 
     public IEnumerator GlitchAndContinue()

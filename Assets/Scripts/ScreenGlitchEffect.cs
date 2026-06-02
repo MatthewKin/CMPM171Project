@@ -17,6 +17,9 @@ public class ScreenGlitchEffect : MonoBehaviour
     public float crtShrinkDuration = 0.5f; // How long the CRT shrink-to-line takes
     public float lingerDuration = 0.3f; // How long the line stays before going black
     public float blackDuration = 0.5f; // How long black screen holds before next scene
+
+    [Header("Scene Transition")]
+    public string nextSceneName;
  
     private Vector2 originalSize;
  
@@ -96,6 +99,6 @@ public class ScreenGlitchEffect : MonoBehaviour
         overlayRect.localScale = Vector3.zero;
         yield return new WaitForSeconds(blackDuration);
 
-        SceneManager.LoadScene("Tutorial1");
+        SceneManager.LoadScene(nextSceneName);
     }
 }
