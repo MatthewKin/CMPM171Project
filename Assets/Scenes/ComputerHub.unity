@@ -1033,7 +1033,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 545077438143906053, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
   m_PrefabInstance: {fileID: 1457218303}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1360325631
+--- !u!114 &1360325635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1042,12 +1042,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360325630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcdb313e0b9874e79befd22d9d74bede, type: 3}
+  m_Script: {fileID: 11500000, guid: 866d5abe4b1521147a3df3e27601f506, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TeleportWindow
-  teleportID: 0
-  teleportOffsetY: 0.5
-  isHubExit: 1
+  m_EditorClassIdentifier: Assembly-CSharp::HubExitTrigger
 --- !u!1001 &1457218303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1175,7 +1172,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 545077438143906053, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1360325631}
+      addedObject: {fileID: 1360325635}
   m_SourcePrefab: {fileID: 100100000, guid: 3cbe1cee040fd4558896b031369930d3, type: 3}
 --- !u!114 &1773233727 stripped
 MonoBehaviour:
@@ -1451,7 +1448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 162.3, y: 100}
+  m_AnchoredPosition: {x: 162.29999, y: 100}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1982652936
