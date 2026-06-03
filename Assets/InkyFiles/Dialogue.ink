@@ -34,9 +34,9 @@ I should be able to use WASD to move.
 Theres gotta be more here?
 ->END
 === Tutorial1_Elara ===
-&&*% %$^&()
+Okay...
 Well, no use in questioning it now, no matter how odd. 
-I gotta find a way out of here, this, me? Whatever.
+Some kind of puzzle...
 Perhaps, if I use these windows I can get to that red one over there. 
 ->END
 === Tutorial2_Elara ===
