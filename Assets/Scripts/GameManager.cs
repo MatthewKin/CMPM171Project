@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,11 +14,16 @@ public class GameManager : MonoBehaviour
     [Header("Glitch Windows")]
     public GlitchWindow[] glitchWindows;
 
+    [Header("Animatior")]
+    public Animator animator;
+
     void Start()
     {
         // store player start position
         if (player != null)
             playerStartPos = player.position;
+
+        StartCoroutine(TeleportInAnimation());
 
         // auto-find draggable windows if not assigned
         if (windows == null || windows.Length == 0)
@@ -30,6 +36,16 @@ public class GameManager : MonoBehaviour
         {
             glitchWindows = FindObjectsOfType<GlitchWindow>();
         }
+    }
+
+     IEnumerator TeleportInAnimation()
+    {
+        print("does this work?");
+        animator.SetBool("IsEnding", true);
+        animator.Play("TeleportReversed");
+        yield return new WaitForSeconds(1.2f);
+        animator.SetBool("IsEnding", false);
+        print("why no work");
     }
 
     void Update()

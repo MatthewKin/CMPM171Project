@@ -27,6 +27,9 @@ public class ComputerHubManager : MonoBehaviour
 
     [Header("Player")]
     public TopDownPlayerWithBounds playerController;
+
+    
+
     IEnumerator Start()
     {
          dialogueBox.SetActive(false);
@@ -57,6 +60,25 @@ public class ComputerHubManager : MonoBehaviour
         
     }
 
+    public void FileTriggered()
+    {
+        if(playerController != null)
+        {
+            playerController.enabled = false; 
+        }
+        StartCoroutine(TeleportOutAndGlitch());
+    }
+
+    IEnumerator TeleportOutAndGlitch()
+    {
+        animator.SetBool("IsEnding", true);
+        animator.Play("Teleport");
+        yield return new WaitForSeconds(1.2f);
+        animator.SetBool("IsEnding", false);
+        playerController.GetComponent<SpriteRenderer>().enabled = false;
+        StartCoroutine(GlitchAndContinue());
+        
+    }
     IEnumerator TeleportInAnimation()
     {
         print("does this work?");
@@ -84,20 +106,10 @@ public class ComputerHubManager : MonoBehaviour
         }
     }
 
-   public void FileClicked()
-    {
-        // Lock player again, then fire glitch sequence
-        if (playerController != null)
-            playerController.enabled = false;
- 
-        clickableFile.SetActive(false);
-        StartCoroutine(GlitchAndContinue());
-    }
- 
-
     public IEnumerator GlitchAndContinue()
     {
         screenGlitch.StartGlitchSequence(); 
+        
         yield return null;
     }
 }

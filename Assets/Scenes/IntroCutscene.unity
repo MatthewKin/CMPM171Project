@@ -1394,6 +1394,7 @@ MonoBehaviour:
   - oopsweat
   - worried
   - worriedsweat
+  nextSceneName: 
 --- !u!114 &861584796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1432,6 +1433,7 @@ MonoBehaviour:
   crtShrinkDuration: 0.5
   lingerDuration: 0.3
   blackDuration: 0.5
+  nextSceneName: ComputerHub
 --- !u!1 &899343230
 GameObject:
   m_ObjectHideFlags: 0

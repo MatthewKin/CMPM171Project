@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroCutscene.unity
     guid: 32a8da8f9f5b30a48904a0cdf3142dca
   - enabled: 1
+    path: Assets/Scenes/ComputerHub.unity
+    guid: f655e7ac7bee3e649b870babbf900eff
+  - enabled: 1
     path: Assets/Scenes/TutorialEnd.unity
     guid: a77d936837928410fa78f52553b6e941
   - enabled: 1
