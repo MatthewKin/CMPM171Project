@@ -5,36 +5,6 @@ public class TeleportWindow : MonoBehaviour
     public int teleportID;
     public float teleportOffsetY = 0.5f;
 
-    [Header("Hub Exit Override")]
-    public bool isHubExit = false; 
-
-    private ComputerHubManager hubManager; 
-
-    void Start()
-    {
-        if(isHubExit)
-        {
-            hubManager = FindObjectOfType<ComputerHubManager>();
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D other) 
-    {
-        if(!other.CompareTag("Player"))
-        {
-            return;
-        }
-        if(isHubExit && hubManager != null)
-        {
-            hubManager.FileTriggered();
-        }
-        else
-        {
-            Teleport(other.gameObject);
-        }
-    }
-
-
     public void Teleport(GameObject player)
 {
     // prevent teleporting while any tile is being dragged

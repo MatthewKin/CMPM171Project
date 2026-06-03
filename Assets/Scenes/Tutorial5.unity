@@ -1376,6 +1376,7 @@ MonoBehaviour:
   player: {fileID: 2031802612}
   windows: []
   glitchWindows: []
+  animator: {fileID: 1279838572514568212}
 --- !u!1 &742664402
 GameObject:
   m_ObjectHideFlags: 0
@@ -19025,6 +19026,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
+--- !u!95 &1279838572514568212 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3956044090237681502, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
+  m_PrefabInstance: {fileID: 1279838572514568211}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1998876597426848726
 PrefabInstance:
   m_ObjectHideFlags: 0
