@@ -17,6 +17,9 @@ public class ScreenGlitchEffect : MonoBehaviour
     public float crtShrinkDuration = 0.5f; // How long the CRT shrink-to-line takes
     public float lingerDuration = 0.3f; // How long the line stays before going black
     public float blackDuration = 0.5f; // How long black screen holds before next scene
+
+    [Header("Scene Transition")]
+    public string nextSceneName;
  
     private Vector2 originalSize;
  
@@ -52,13 +55,17 @@ public class ScreenGlitchEffect : MonoBehaviour
         }
         glitchOverlay.color = new Color(c.r, c.g, c.b, 1f);
 
-        // Hide everything underneath — player can't see it since overlay is fully opaque
-        Transform canvas = FindObjectOfType<IntroCutsceneManager>().transform;
-        foreach (Transform child in transform)
+        // FIX: Safely find the Canvas this overlay belongs to and hide other UI elements
+        Canvas parentCanvas = GetComponentInParent<Canvas>();
+        if (parentCanvas != null)
         {
-            if(child.gameObject.name != "GlitchOverlay")
+            foreach (Transform child in parentCanvas.transform)
             {
-                child.gameObject.SetActive(false);
+                // Don't deactivate the GlitchOverlay itself, or the video will stop!
+                if (child.gameObject != glitchOverlay.gameObject)
+                {
+                    child.gameObject.SetActive(false);
+                }
             }
         }
 
@@ -92,6 +99,6 @@ public class ScreenGlitchEffect : MonoBehaviour
         overlayRect.localScale = Vector3.zero;
         yield return new WaitForSeconds(blackDuration);
 
-        SceneManager.LoadScene("Tutorial1");
+        SceneManager.LoadScene(nextSceneName);
     }
 }

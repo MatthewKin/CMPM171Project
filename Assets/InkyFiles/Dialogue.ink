@@ -22,13 +22,19 @@ Something doesn't feel right. # elara:worried
 === Intro_Elara_WrongPassword ===
 No, that's not quite right, I hope I didn't write down the wrong password. # elara:hm
 ->END
-=== Tutorial1_Elara ===
-&&*% %$^&()
+=== Computer_Hub_Spawn ===
 What the-
 Well this isn't good...
 My body, my hair...
 I'm...pixelated?
-Ugh, not a great start to a weekend. 
+Not a great start to a weekend. 
+Although, I am curious.
+No, no, Elara not the time. 
+I should be able to use WASD to move.
+Theres gotta be more here?
+->END
+=== Tutorial1_Elara ===
+&&*% %$^&()
 Well, no use in questioning it now, no matter how odd. 
 I gotta find a way out of here, this, me? Whatever.
 Perhaps, if I use these windows I can get to that red one over there. 
