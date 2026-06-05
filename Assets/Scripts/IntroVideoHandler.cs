@@ -13,15 +13,18 @@ public class IntroVideoHandler : MonoBehaviour
     public GameObject gameCanvas;       
     public GameObject dialogueObject;   
     public GameObject puzzleObject;     
+    
 
     [Header("Behavior")]
     [Range(0f, 1f)]
     public float fadedAlpha = 0.3f;     
     public float finalFadeDuration = 2f; // Total duration of the cross-fade transition
     public UnityEvent onVideoFaded;     
+    public UnityEvent onDialogueFinished; // Optional event for when the puzzle is fully visible after cross-fade
 
     private VideoPlayer videoPlayer;
     private bool hasFaded = false;      
+    public UnityEvent onFadeFinished;
 
     void Awake()
     {
@@ -69,7 +72,6 @@ public class IntroVideoHandler : MonoBehaviour
     {
         if (hasFaded) return;
         hasFaded = true;
-
         videoPlayer.targetCameraAlpha = fadedAlpha;
         videoPlayer.isLooping = true;
         videoPlayer.Play();
@@ -91,6 +93,7 @@ public class IntroVideoHandler : MonoBehaviour
 
     private IEnumerator CrossFadeAndDestroy()
     {
+        onDialogueFinished?.Invoke(); // Optional: Notify that the dialogue has finished and puzzle is about to appear
         float startVideoAlpha = videoPlayer.targetCameraAlpha;
         float elapsed = 0f;
 
@@ -140,6 +143,7 @@ public class IntroVideoHandler : MonoBehaviour
             puzzleCanvasGroup.alpha = 1f;
         }
 
+        onFadeFinished?.Invoke();
         // Destroy the video handler now that the visual transition is finished
         Destroy(gameObject);
     }

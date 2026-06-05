@@ -20,6 +20,7 @@ public class ScreenGlitchEffect : MonoBehaviour
 
     [Header("Scene Transition")]
     public string nextSceneName;
+
  
     private Vector2 originalSize;
  
