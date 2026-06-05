@@ -597,6 +597,7 @@ MonoBehaviour:
   animator: {fileID: 1773233730}
   screenGlitch: {fileID: 861584797}
   playerController: {fileID: 1773233727}
+  player: {fileID: 1103545829}
 --- !u!1 &880243936
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,11 +838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1131166730822555059, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.08
+      value: -12.531394
       objectReference: {fileID: 0}
     - target: {fileID: 1131166730822555059, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.34
+      value: -9.293376
       objectReference: {fileID: 0}
     - target: {fileID: 1131166730822555059, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -896,6 +897,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
+--- !u!4 &1103545829 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1131166730822555059, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
+  m_PrefabInstance: {fileID: 1103545828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1157835046
 GameObject:
   m_ObjectHideFlags: 0

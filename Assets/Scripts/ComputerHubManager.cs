@@ -28,10 +28,15 @@ public class ComputerHubManager : MonoBehaviour
     [Header("Player")]
     public TopDownPlayerWithBounds playerController;
 
+     [Header("Player")]
+    public Transform player;
+
+
     
 
     IEnumerator Start()
     {
+         player.gameObject.SetActive(false);
          dialogueBox.SetActive(false);
         clickableFile.SetActive(false);
  
@@ -39,7 +44,8 @@ public class ComputerHubManager : MonoBehaviour
         if (playerController != null)
             playerController.enabled = false;
  
-        
+         player.gameObject.SetActive(true);
+        yield return null;
         StartCoroutine(TeleportInAnimation());
 
         if (dialogue0.dialogueFinished == null)
