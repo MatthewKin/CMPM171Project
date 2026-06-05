@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,13 +18,13 @@ public class GameManager : MonoBehaviour
     [Header("Animatior")]
     public Animator animator;
 
+
     void Start()
     {
+        player.gameObject.SetActive(false);
         // store player start position
         if (player != null)
             playerStartPos = player.position;
-
-        StartCoroutine(TeleportInAnimation());
 
         // auto-find draggable windows if not assigned
         if (windows == null || windows.Length == 0)
@@ -36,16 +37,35 @@ public class GameManager : MonoBehaviour
         {
             glitchWindows = FindObjectsOfType<GlitchWindow>();
         }
+
+        IntroVideoHandler introVideo = FindObjectOfType<IntroVideoHandler>();
+        if (introVideo != null)
+        {
+            // Wait for video to finish before playing teleport
+           if (introVideo.onFadeFinished == null)
+            {
+                introVideo.onFadeFinished = new UnityEvent();
+            }
+           introVideo.onFadeFinished.AddListener(() => StartCoroutine(TeleportInAnimation()));
+        }
+        else
+        {
+            // No intro video in this scene, play immediately
+            StartCoroutine(TeleportInAnimation());
+        }
+        
     }
 
      IEnumerator TeleportInAnimation()
     {
-        print("does this work?");
+        player.gameObject.SetActive(true);
+        yield return null;
+        Debug.Log("TELEPORT ANIM STARTING AT: " + Time.time);
         animator.SetBool("IsEnding", true);
         animator.Play("TeleportReversed");
         yield return new WaitForSeconds(1.2f);
         animator.SetBool("IsEnding", false);
-        print("why no work");
+        Debug.Log("TeleportInAnimation finished");
     }
 
     void Update()

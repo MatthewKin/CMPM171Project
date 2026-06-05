@@ -1586,6 +1586,12 @@ MonoBehaviour:
   onVideoFaded:
     m_PersistentCalls:
       m_Calls: []
+  onDialogueFinished:
+    m_PersistentCalls:
+      m_Calls: []
+  onFadeFinished:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1211866701
 Transform:
   m_ObjectHideFlags: 0
@@ -1669,8 +1675,8 @@ Canvas:
   m_GameObject: {fileID: 1249977844}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -17731,7 +17737,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 35.600006, y: 33.600006}
+  m_AnchoredPosition: {x: 35.600037, y: 33.600006}
   m_SizeDelta: {x: 160, y: 160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1347423367
@@ -17928,6 +17934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1817353638}
+  - component: {fileID: 1817353639}
   m_Layer: 0
   m_Name: Puzzle
   m_TagString: Untagged
@@ -17947,9 +17954,22 @@ Transform:
   m_LocalPosition: {x: 10.6, y: -4.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2031802612}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!225 &1817353639
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817353637}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!4 &2031802612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1131166730822555059, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
@@ -18071,7 +18091,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1817353638}
     m_Modifications:
     - target: {fileID: 861569526129200240, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
       propertyPath: nextSceneName
@@ -18079,11 +18099,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1131166730822555059, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.6
+      value: 0.3175087
       objectReference: {fileID: 0}
     - target: {fileID: 1131166730822555059, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.45
+      value: -0.09847355
       objectReference: {fileID: 0}
     - target: {fileID: 1131166730822555059, guid: 3819a4bd70188439ba94ccd79fb6757e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18216,6 +18236,7 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1182019721}
   - {fileID: 619394802}
+  - {fileID: 26595124}
   - {fileID: 1817353638}
   - {fileID: 28119031}
   - {fileID: 2087323423}
@@ -18224,9 +18245,7 @@ SceneRoots:
   - {fileID: 8536939144813569395}
   - {fileID: 1211866701}
   - {fileID: 1249977848}
-  - {fileID: 1279838572514568211}
   - {fileID: 162723090}
   - {fileID: 27262049}
   - {fileID: 1170797338}
   - {fileID: 627726367}
-  - {fileID: 26595124}
